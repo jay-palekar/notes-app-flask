@@ -1,0 +1,175 @@
+body{
+    background-color: #f3f1f1;
+    font-family: "Poppins", sans-serif;
+    margin: 40px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.note-card{
+    background: #FFF9F0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+
+    transition: 0.25s ease;
+}
+
+.note-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.note-card h2{
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+small{
+    color: #6b7280;
+}
+
+.form-card{
+    background: #FFF9F0;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    max-width: 900px;
+    margin: auto;
+}
+
+.form-actions{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+
+input[type="text"], textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+input :focus, textarea:focus{
+    outline: none;
+    border-color: #4f90f9;
+    box-shadow: 0 0 0 3px rgba(79, 144, 249, .18);
+}
+
+button{
+    background-color: #4f90f9;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-size: 15px;
+}
+
+button:hover{
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(79, 144, 249, .35);
+}
+
+h1{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 650;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.search-form{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.search-form input{
+    flex: 1;
+}
+
+.search-form button{
+    padding: 12px 24px;
+}
+
+.pin-badge{
+    background-attachment: #fde68a;
+    background: #9b572d7b;
+    color: #fcf5da;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.note-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.subtitle{
+    text-align: center;
+    color: #666;
+    margin-top: -25px;
+    margin-bottom: 45px;
+}
+
+.note-actions{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-btn{
+    background: #10b981;
+}
+
+.add-btn:hover{
+    background: #059669;
+}
+
+.edit-btn{
+    background: #2563eb;
+}
+
+.edit-btn:hover{
+    background: #0051ff;
+}
+
+.delete-btn{
+    background: red;
+}
+
+.delete-btn:hover{
+    background: rgb(240, 0, 0);
+}
+
+.pin-btn{
+    background: orange;
+}
+
+.pin-btn:hover{
+    background: rgb(255, 132, 0);
+}

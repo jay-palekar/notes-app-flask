@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>📝 Notes App</h1>
+
+<br>
+
+<p class="subtitle">
+    Organize your thoughts beautifully.
+</p>
+
+<br>
+
+<form method="GET" class="search-form">
+
+    <input
+    type="text"
+    name="search"
+    placeholder="Search note..."
+    value="{{ request.args.get('search', '') }}"
+    >
+
+    <button>Search</button>
+
+</form>
+
+<br><br>
+
+<a href="{{ url_for('add_note') }}">
+    <button class="add-btn">Add Note</button>
+</a>
+
+<br><br>
+
+{% if not notes %}
+
+    No notes yet. Click 'Add Note' to add your first note!
+
+{% endif %}
+
+{% for note in notes %}
+
+<div class="note-card">
+
+<h2>{{note[1]}}</h2>
+
+<p>{{note[2]}}</p>
+
+{% if note[5] %}
+
+<small>Edited: {{note[5]}}</small>
+
+{% else %}
+
+<small>🕒Created {{note[4]}}</small>
+
+{% endif %}
+
+<div class="note-actions">
+
+<a href="/edit/{{note[0]}}">
+    <button class="edit-btn">Edit</button>
+</a>
+
+<a href="/delete/{{note[0]}}"
+    onclick="return confirm('Are you sure you want to delete this note?')"
+>
+    <button class="delete-btn">Delete</button>
+</a>
+
+<a href="/pin/{{note[0]}}/{{note[3]}}">
+    <button class="pin-btn">
+        {% if note[3] == 1 %}
+        📍Unpin
+        {% else %}
+        📌Pin
+        {% endif %}
+    </button>
+</a>
+
+{% if note[3] == 1 %}
+    <span class="pin-badge">
+    📌 Pinned
+    </span>
+    {% endif %}
+
+</div>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

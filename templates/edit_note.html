@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br><br>
+
+<div class="form-card">
+
+<h1>Edit Note</h1>
+
+<form method="POST" form="note-form">
+
+Title:
+<input
+type="text"
+name="title"
+value="{{note[1]}}"
+>
+
+<br><br>
+
+Content:
+<input
+type="text"
+name="content"
+value="{{note[2]}}"
+>
+
+<br><br>
+
+<div class="form-actions">
+<button>Save</button>
+</div>
+
+</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="form-card">
+
+<h1>Add Note</h1>
+
+<form method="POST" class="note-form">
+
+Title:
+
+<br>
+
+<input type="text" name="title">
+
+<br><br>
+
+Content:
+
+<br>
+
+<textarea name="content" rows="8" cols="40"></textarea>
+
+<br><br>
+
+<div class="form-actions">
+<button>Save Note</button>
+</div>
+
+</form>
+
+</div>
+
+{% endblock %}
