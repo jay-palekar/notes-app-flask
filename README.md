@@ -1,5 +1,9 @@
 # 📝 Notes App
 
+## 📸 Preview
+
+![Notes App](images/notes_app_mockup.png)
+
 A clean and responsive Notes App built with Flask and SQLite.
 
 ## Features
